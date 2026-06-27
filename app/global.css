@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bone: #F2EBE5;
+  --ink: #2B262D;
+  --dusk: #647295;
+  --rose: #9F496E;
+  --sage: #94A7AE;
+  --mauve: #C0A9BD;
+  --cream: #F4F2F3;
+  --ink-light: #5A5360;
+  --ink-muted: #8A8490;
+}
+
+html {
+  background-color: var(--bone);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Lenis smooth scroll */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Selection color */
+::selection {
+  background: #C0A9BD;
+  color: #2B262D;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid #647295;
+  outline-offset: 3px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bone);
+}
+::-webkit-scrollbar-thumb {
+  background: #C0A9BD;
+  border-radius: 3px;
+}
+
+@layer utilities {
+  .font-cormorant {
+    font-family: var(--font-cormorant), Georgia, serif;
+  }
+
+  .tracking-eyebrow {
+    letter-spacing: 0.14em;
+  }
+
+  .tracking-button {
+    letter-spacing: 0.1em;
+  }
+}
